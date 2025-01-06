@@ -1,0 +1,23 @@
+{
+  "name": "timosjuice",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production && tsc",
+    "watch:sass": "sass src/main.scss src/styles/main.css -w"
+  },
+  "devDependencies": {
+    "@types/three": "^0.171.0",
+    "sass": "^1.83.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "~5.6.2",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "three": "^0.172.0"
+  }
+}

@@ -1,0 +1,14 @@
+@mixin flex {
+    display: flex;
+}
+
+@mixin flex-center {
+    display: flex;
+    place-items: center;
+}
+
+@mixin justifyFlex-center {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
