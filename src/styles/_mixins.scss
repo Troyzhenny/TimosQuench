@@ -12,3 +12,8 @@
     place-items: center;
     justify-content: center;
 }
+
+@mixin maxScreen {
+    width: 100%;
+    height: 100dvh;
+}
