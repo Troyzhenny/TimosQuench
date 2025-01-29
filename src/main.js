@@ -2,6 +2,16 @@ import { createScene } from "./scripts/sceneSetup.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     createScene();
+
+    const handleGoToBasket = () => {
+        console.log("Basket button Clicked");
+    }
+    const basketButton = document.getElementById('basketButton');
+    if(basketButton) {
+        basketButton.addEventListener('click', handleGoToBasket);
+    } else {
+        console.log('Basket button not found!')
+    }
 });
 
 const LeMenu = document.querySelector(".menu-wrapper");
