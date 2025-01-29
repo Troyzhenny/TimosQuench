@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 
 export const createScene = () => {
     // Create the scene
@@ -8,15 +8,22 @@ export const createScene = () => {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
     // Create the renderer and attach it to the document
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({alpha: true});
+    renderer.setClearColor(0x000000, 0);
     renderer.setSize(window.innerWidth, window.innerHeight);
-    const sectOne = document.querySelector("#sectOne") as HTMLElement;
-    sectOne?.appendChild(renderer.domElement);
-    console.log(sectOne)
+
+    // Ensure #sectOne exists
+    const myCanvas = document.querySelector(".section--one");
+    if (myCanvas) {
+        // myCanvas.innerHTML = '';
+        myCanvas.appendChild(renderer.domElement);
+    } else {
+        console.error("Canvas not found!");
+    }
 
     // Create a cube and add it to the scene
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const geometry = new THREE.BoxGeometry(3, 3, 3);
+    const material = new THREE.MeshBasicMaterial({ color: 0xff6d09 });
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
