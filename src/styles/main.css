@@ -37,43 +37,54 @@ header nav a {
   color: #1c1c1c;
   text-decoration: none;
 }
-header #ham-menu {
+header .menu-wrapper {
+  display: flex;
+  place-items: center;
+  cursor: pointer;
+}
+header .menu-wrapper span {
+  font-weight: 700;
+}
+header .menu-wrapper #ham-menu {
   display: flex;
   place-items: center;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: #50ff50;
+  background-color: #ff6d09;
   border-radius: 100%;
-  width: 4rem;
-  height: 4rem;
   justify-content: center;
+  width: 2rem;
+  height: 2rem;
 }
-header #ham-menu .bar {
-  width: 2.2rem;
-  height: 0.09rem;
-  background: #000;
+header .menu-wrapper #ham-menu:hover {
+  background-color: #d3d3d3;
+  transition: all 1s ease-in-out;
 }
 
-#sectOne {
-  background-color: #f3f3f3;
-  display: flex;
-  place-items: center;
-  justify-content: center;
+.section--one {
+  background-color: transparent;
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
-#sectOne .big-text {
+.section--one .big-text {
   font-size: 15rem;
-}
-
-.big-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #1c1c1c;
-  font-size: 5rem;
+  z-index: 1;
+}
+.section--one canvas {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 10;
 }
 
