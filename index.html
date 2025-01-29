@@ -11,30 +11,29 @@
 </head>
 
 <body>
-  <div id="app">
+  <main id="app">
     <header>
-      <img id="logo" src="public/images/logo.png" alt="Timo's logo">
-      <nav>
+      <!-- <nav>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">About us</a></li>
           <li><a href="#">Contact us</a></li>
         </ul>
-      </nav>
-      <div id="ham-menu" class="">
-        <div id="bar1" class="bar"></div>
-        <div id="bar2" class="bar"></div>
-        <div id="bar3" class="bar"></div>
+      </nav> -->
+      <div class="menu-wrapper">
+        <span>Menu</span>
+        <div id="ham-menu" class=""></div>
       </div>
       
       <i class="fa-solid fa-basket-shopping"></i>
     </header>
-    <section id="sectOne">
+    <section id="section1" class="section--one">
+      <canvas id="myCanvas"></canvas>
       <h1 class="big-text">QUENCH</h1>
     </section>
-  </div>
-  <script type="module" src="/src/main.ts"></script>
+  </main>
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
